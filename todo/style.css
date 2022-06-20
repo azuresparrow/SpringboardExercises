@@ -1,0 +1,35 @@
+body {
+    background-color: rgb(14, 8, 34);
+    color:rgb(121, 168, 207); 
+}
+
+.hidden { 
+    display: none;
+}
+.checked{
+    text-decoration: line-through;
+}
+#activeList {
+    list-style-type: none;
+}
+
+#activeList li {
+    background-color: rgb(23, 23, 82);
+    padding:.7em;
+    margin:.7em;
+    width:60%;
+
+}
+
+#activeList label {
+    margin:10px;
+    font-size: 16px;
+}
+
+#activeList li button {
+    border:0;
+    background-color: #574d4d;
+    border-radius: 5px;
+    cursor: pointer;
+    float:right;
+}
