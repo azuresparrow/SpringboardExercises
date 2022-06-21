@@ -1,0 +1,23 @@
+mkdir first
+cd first
+touch person.txt
+mv person.txt another.txt
+cp another.txt copy.txt
+rm copy.txt
+cp -r first second
+rm -r second
+
+man gives a manual on the command you type after it.
+arrowkeys can navigate, Q can exit
+alt + left/right jumps word to word
+ctrl + E - end of line
+ctrl + A - beginning of line
+ctrl W - delete word
+shell - what actually is processing commands and returning output, terminal is the wrapper program running the shell.
+absolute path is the route to the file from root
+a relative path is the route to the file from the current directory
+flags can alter commands
+-a (all) allows us to see hidden files/folders using LS
+-r allows copy/remove to effect directories while the standard command won't
+-l allows LS to get a more detailed look at the files, such as permissions.
+rm -rf forces deletion without confirmation of every file/folder within the folder.
