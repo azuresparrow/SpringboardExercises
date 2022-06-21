@@ -1,0 +1,12 @@
+const PI = 3.14
+
+var has a function scope and can be redeclared, let has a block scope, and will prevent itself from being redeclared.
+const can not only not be redeclared, it also can't be reassigned. 
+It remains a fixed value, though that value might be a reference to an object, 
+on which the properties can change, even if the pointer to the object can't
+
+Unlike const, let can be reassigned, but they otherwise behave quite similarly.
+
+Hoisting happens when using var, where the variable declarations were effectively brought to the top of the file, 
+this changed the errors that occured throughout the times the variable was accessed too early, because though one might expect it to not exist
+it did, it was just undefined.
