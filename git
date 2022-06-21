@@ -14,3 +14,10 @@ git commit -m "removing third.txt"
 git log
 git config --global core.pager "cat"
 git config --global --list
+
+
+Branching
+git checkout -b nameofbranch
+fast forwards can only be used if the original branch has been unchanged since the branch started.
+git checkout nameofbranch
+git branch -D
