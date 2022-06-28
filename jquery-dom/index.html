@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet"
+        href="https://unpkg.com/bootstrap/dist/css/bootstrap.css">
+  <style>
+
+    img {
+      max-width: 70%;
+    }
+
+    .image-center {
+      display: block;
+      margin: 10px auto;
+    }
+
+  </style>
+</head>
+
+<body>
+<div class="container">
+  <h1 id="title" class="text-center">Movies</h1>
+  <form>
+    <label for="movieTitle">Movie Title:</label>
+    <input id="movieTitle" type="text"/>
+    <label for="movieRating">Rating:</label>
+    <input id="movieRating" type="range" min="1" max="5" step="1"/>
+    <input id="submitMovie" type="submit"/>
+  </form>
+</div>
+
+<ul id="movieList">
+
+</ul>
+
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script>
+
+  /*
+
+PART1
+  $(function(){
+    console.log("Let's get ready to party with jQuery!");
+  });
+  
+  $("article img").addClass("image-center");
+
+  $("article p:last-child").remove();
+
+  $("#title").css("font-size", Math.random() * 100);
+
+  $("ol").append($("<li>", {text: "addin a list"}));
+
+  $("aside").empty().append($("<p>", "Oops"));
+
+  $(".form-control").on('keyup blur change'), function(){
+    let r = $(".form-control").eq(0).val();
+    let b = $(".form-control").eq(1).val();
+    let g = $(".form-control").eq(2).val();
+    $("body").css("background-color", "rgb(" + r + "," + g + "," + b + ")");
+  }
+  $("img").on('click', function (e) {
+    $(e.target).remove();
+  });*/
+  let movieList = [];
+
+  $("#submitMovie").on("click", function(e){
+    e.preventDefault();
+    const newRating = $("#movieRating").val();
+    const newTitle = $("#movieTitle").val();
+    const id = Date.now();
+    const newMovie = {id, newTitle, newRating}
+    movieList.push(newMovie);
+    $("#movieList").append(createMovieUI(newMovie));
+  });
+
+  function createMovieUI(data){
+    return `<li id="${data.id}">
+      ${data.newTitle} - ${data.newRating}
+      <button id="delete-${data.id}">Remove<button/>
+    </li>`
+  }
+
+  $("#movieList").on("click", "button", function(e){
+    $(e.target).closest("li").remove();
+  });
+</script>
+</body>
+
+</html>
