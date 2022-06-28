@@ -1,0 +1,35 @@
+
+What is HTTP?
+
+HyperTextTransferProtocol. It's basically a method of formating information in a way the browser can process into a page.
+
+What is a URL?
+a url is basically an address to exchange data with
+
+What is DNS?
+the domain name system is basically like the post-office sorting our messages and sending them off to the right IP.
+
+What is a query string?
+sets of keyvalue pairs that can be appended to the url
+
+What are two HTTP verbs and how are they different?
+GET - recieves data from the server
+POST - sends data to the server
+
+What is an HTTP request?
+a request to the server following the particular protocol, includes a specific header format and method of structuring information
+
+What is an HTTP response?
+the load of data that the server sends back in response, it could be any type of file
+
+What is an HTTP header? Give a couple examples of request and response headers you have seen.
+Headers are basically meta information like what type of file it is, when it was last modified, language, cache state, etc.
+
+What are the processes that happen when you type “http://somesite.com/some/page.html” into a browser?
+
+the domain name system convert that to an IP to retrieve data from
+your browser sends an HTTP request to that IP
+the server responds with the HTML for page.html
+the DOM is constructed from that HTML, and in doing so it will likely send more requests, for things like included scripts and stylesheets
+these file requests and then resolved in a similar process
+
